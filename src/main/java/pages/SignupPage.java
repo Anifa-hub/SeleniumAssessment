@@ -19,8 +19,10 @@ public class SignupPage {
     public void setEmail(String email){
         driver.findElement(emailField).sendKeys(email);
     }
-    public void clickSignupButton(){
+    //on account information is where I am going to test dropdown
+    public AccountInformationPage clickSignupButton(){
         driver.findElement(signUpButton).click();
+        return new AccountInformationPage (driver);
     }
 
 }

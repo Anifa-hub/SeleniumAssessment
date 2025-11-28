@@ -19,5 +19,14 @@ public class Product {
         driver.findElement(addtoCart).click();
     }
 
+    public String getTextOnPopUp() {
+        String answer = "";
+         By getCartMessage = By.cssSelector("#cartModal > div > div > div.modal-header > h4");
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        WebElement titleOfElement = wait.until(ExpectedConditions.visibilityOf(driver.findElement(getCartMessage)));
+
+        answer = titleOfElement.getText();
+        return answer;
+    }
 }
