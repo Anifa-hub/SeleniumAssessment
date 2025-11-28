@@ -3,13 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class SignupPage {
     private WebDriver driver;
     private By userNameField = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[2]");
     private By emailField = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]");
     private By signUpButton = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button");
 
-    public LoginPage(WebDriver driver){
+    public SignupPage(WebDriver driver){
         this.driver = driver;
     }
 
