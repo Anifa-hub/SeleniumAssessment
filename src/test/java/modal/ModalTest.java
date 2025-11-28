@@ -11,6 +11,6 @@ public class ModalTest extends BaseTests {
     public void testModal(){
        var modal = homePage.clickOnProduct();
        modal.clickOnAddToCart();
-
+       assertEquals(modal.getTextOnPopUp(), "Added!","Incorrect text");
     }
 }
