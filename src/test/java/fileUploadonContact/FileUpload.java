@@ -13,6 +13,6 @@ public class FileUpload extends BaseTests {
         uploading.setMessage("This is a test");
 
         uploading.setFileUpload("E:\\kepler\\Dosiye Isaba ikazi (Umuratwa Afsana).docx");
-        // uploading.clickSubmitButton();
+        uploading.acceptAlert();
     }
 }
