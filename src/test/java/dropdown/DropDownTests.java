@@ -10,9 +10,14 @@ public class DropDownTests extends BaseTests {
     @Test
 
     public void testDropDown(){
-        String element = "Option 1";
-        homePage.selectFromDropdown(element);
-        var selectedElement = homePage.getSelectedOPtions();
+       // var selecting = homePage.clickLogin().clickSignupButton();
+        var sign = homePage.clickLogin();
+        sign.setUsername("anifa");
+        sign.setEmail("anifabazubagira@gmail.com");
+       var selecting = sign.clickSignupButton();
+        String element = "India";
+        selecting.selectFromDropdown(element);
+        var selectedElement = selecting.getSelectedOPtions();
         assertEquals(selectedElement.size(), 1,"Incorrect selected option");
         assertTrue(selectedElement.contains(element),"Incorrect selected option");
     }
