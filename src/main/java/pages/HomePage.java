@@ -4,10 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class HomePage {
     private WebDriver driver;
@@ -19,9 +15,9 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public SignupPage clickLogin(){
+    public loginPage clickLogin(){
         clickLink("Signup / Login");
-        return new SignupPage(driver);
+        return new loginPage(driver);
     }
 
 
