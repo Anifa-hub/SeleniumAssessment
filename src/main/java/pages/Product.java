@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Product {
     private WebDriver driver;
-    private By addtoCart = By.xpath("/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a");
+    private By addtoCart = By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a");
 
     public Product(WebDriver driver){
         this.driver = driver;

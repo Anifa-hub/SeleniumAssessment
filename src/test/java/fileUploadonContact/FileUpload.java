@@ -3,6 +3,9 @@ package fileUploadonContact;
 import base.BaseTests;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.assertEquals;
+
+
 public class FileUpload extends BaseTests {
     @Test
     public void FileUploadTest(){
@@ -12,7 +15,8 @@ public class FileUpload extends BaseTests {
         uploading.setSubject("selenium");
         uploading.setMessage("This is a test");
 
-        uploading.setFileUpload("E:\\kepler\\Dosiye Isaba ikazi (Umuratwa Afsana).docx");
+        uploading.setFileUpload("E:/Java/SeleniumAssessment/resources/chromedriver.exe");
         uploading.acceptAlert();
+        assertEquals(uploading.confirmAssertion(),"Success! Your details have been submitted successfully.","you are not uploading any file");
     }
 }

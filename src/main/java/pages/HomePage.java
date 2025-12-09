@@ -4,10 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class HomePage {
     private WebDriver driver;
@@ -19,13 +15,22 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public SignupPage clickLogin(){
+    public SignupPage clickSignup(){
         clickLink("Signup / Login");
         return new SignupPage(driver);
     }
 
-
-
+    public LoginPage clickLoginPage(){
+        clickLink("Signup / Login");
+        return new LoginPage(driver);
+    }
+    //delete account
+//    public void deleteAccount(){
+//        clickLink("Delete Account");
+//    }
+//    public String confirmDeleteAccount(){
+//        return driver.findElement(By.cssSelector("div b")).getText();
+//    }
 
     // testing Modal on productpage
     public Product clickOnProduct(){

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class SignupPage {
     private WebDriver driver;
-    private By userNameField = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[2]");
-    private By emailField = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]");
-    private By signUpButton = By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button");
+    private By userNameField = By.cssSelector("input[name='name']");
+    private By emailField = By.cssSelector("input[data-qa='signup-email']");
+    private By signUpButton = By.cssSelector("button[data-qa='signup-button']");
 
     public SignupPage(WebDriver driver){
         this.driver = driver;

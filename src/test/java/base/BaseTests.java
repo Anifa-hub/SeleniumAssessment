@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
+import java.time.Duration;
+
 
 public class BaseTests {
     private WebDriver driver;
@@ -19,6 +21,7 @@ public class BaseTests {
         driver = new ChromeDriver();
         goHome();
         homePage = new HomePage(driver);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     @BeforeMethod
@@ -27,10 +30,10 @@ public class BaseTests {
     }
 
 
-    @AfterClass
-    public void tearDown(){
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
 
 
