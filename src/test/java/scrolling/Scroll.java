@@ -7,6 +7,8 @@ public class Scroll extends BaseTests {
     @Test
 
     public void testSrollOnHome(){
-        homePage.scrollToProducts();
+
+        var scrolling =homePage.clickOnProduct();
+        scrolling.scrollToBottom();
     }
 }

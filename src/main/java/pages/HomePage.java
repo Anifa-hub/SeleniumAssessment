@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
     private WebDriver driver;
-    private By scrollBox = By.xpath("/html/body/section[2]/div/div/div[2]/div[1]");
+
 
 
 
@@ -34,17 +34,10 @@ public class HomePage {
 
     // testing Modal on productpage
     public Product clickOnProduct(){
-        driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[8]/a")).click();
+        driver.findElement(By.partialLinkText("Products")).click();
         return new Product(driver);
     }
 
-
-    //Scrolling products on homePage
-    public void scrollToProducts(){
-        WebElement productsElement = driver.findElement(scrollBox);
-        String script = "arguments[0].scrollIntoView;";
-        ((JavascriptExecutor)driver).executeScript(script,productsElement);
-    }
 
     // fileUpload on contact page
     public ContactPage clickOnContact(){
