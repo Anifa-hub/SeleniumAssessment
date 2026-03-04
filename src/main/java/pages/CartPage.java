@@ -11,7 +11,7 @@ public class CartPage {
         this.driver = driver;
     }
 
-    public void  clickOnProceedToCheck(){
+    public void clickOnProceedToCheck(){
         driver.findElement(proceedToCheck).click();
     }
 
